@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Create a Post</h1>
+
+<%= render "form", post: @post %>
+
+<h1>Posts</h1>
+
+<%= turbo_stream_from "posts" %>
+<%= turbo_frame_tag "posts" do %>
+  <%= render @posts %>
+<% end %>
